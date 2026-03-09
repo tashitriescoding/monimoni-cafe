@@ -67,26 +67,127 @@ header {
 .photo-container {
   width: 310px;            /* Increased size */
 }
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+body{
+  background-color:rgb(254, 249, 249);
+
+}
+li, a, button{
+  font-family: "Inter", sans-serif ;
+  font-weight: semi-bold;
+  font-size: 12;
+  color: #423C3C;
+  background-color: #D9D9D9;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 10%;
+}
+
+.site-header {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    background-color: #D9D9D9;
+    color: #423C3C;
+    padding: 20px 20px;
+}
+.logo{
+  width: 180px; 
+  height: 32px;
+}
+.logo {
+  cursor: pointer;
+}
+
+.nav__links {
+  list-style: none;
+}
+
+.nav__links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.nav__links li a {
+  transition: all 0.3s ease 0s;
+}
+/* 1. The Wrapper: This handles the side-by-side layout */
+.hero-section {
+  display: flex;
+  justify-content: center; /* Centers the whole group horizontally */
+  align-items: center;     /* Aligns image and text vertically */
+  gap: 100px;              /* Creates the perfect space between image and text */
+  padding: 80px 10%;
+}
+
+/* 2. The Photo: Increased size to match Figma */
+.photo-container {
+  width: 310px;            /* Increased size */
+}
+
 
 .photo-container img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 60px;     /* Matches the high curvature in Figma */
+  border-radius: 60px;
   box-shadow: 8px 8px 7px 0px rgba(0, 0, 0, 0.2);
-  position: relative;   /* Keeps the element in the flow, but allows offsets */
-  top: -60px;           /* Negative moves it UP */
-  left: 20px;   
 }
 
 /* 3. The Text: Removed negative margins */
 .text-container {
-  position: relative;   /* Keeps the element in the flow, but allows offsets */
-  top: -110px;           /* Negative moves it UP */
-  left: 20px;           /* Positive moves it RIGHT */
-  
   max-width: 400px;
-  /* ... your other styles ... */
+}
+
+
+
+.text-container h1 {
+  color: #403A33;
+  font-family: "Instrument Serif", serif; /* Ensure the name matches Google Fonts exactly */
+  font-size: 64px;         /* Estimated from Figma */
+  border-bottom: 2px solid #403A33;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  font-weight: 400;
+}
+
+.my-button {
+    /* Colors from Figma */
+    background-color: #D9D9D9; 
+    color: #403A33;            
+    border: 1px solid #403A33; /* Thin dark border */
+    
+    /* The Oval Shape */
+    padding: 12px 40px;        /* Vertical and Horizontal space */
+    border-radius: 50px;       /* High number creates the pill/oval shape */
+    
+    /* Text Styling */
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    /*Position */
+    display: inline-block;
+    margin-top: 20px;  
+}
+
+/* Hover effect to make it feel interactive */
+.my-button:hover {
+    background-color: #c9c9c9;
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
 .text-container h1 {
